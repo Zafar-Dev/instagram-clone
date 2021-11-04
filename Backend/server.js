@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import pusher from 'pusher'
 import mongoose  from 'mongoose'
+// Routes
+import initRoutes from './routes/web.js'
 
 // app Configuration
 const app = express()
@@ -12,9 +14,20 @@ app.use(express.json())
 app.use(cors())
 
 // DB Configuration
+const DB_NAME = 'instagram-clone'
+const PASSWORD = 'root'
+const CONNECTION_URL = `mongodb+srv://admin:${PASSWORD}@cluster0.u41my.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
+mongoose.connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+mongoose.connection.once('open', () => {
+    console.log('DB Is Connected')
+})
 
 // API Routes
-app.get("/", (req, res) => res.status(200).send('Hello World'))
+initRoutes(app)
+
 
 // Listener
 app.listen(PORT, () => console.log(`Listening On localhost: ${PORT}`))
