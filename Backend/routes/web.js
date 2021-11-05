@@ -7,6 +7,7 @@ const initRoutes = (app) => {
 
     // -- Authenticate --
     app.post('/signup', authController.signUp)
+    app.post('/signin', authController.signIn)
 
     app.get('/', homeController.index)
 

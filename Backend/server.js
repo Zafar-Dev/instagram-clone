@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import pusher from 'pusher'
 import mongoose  from 'mongoose'
+import {DB_URL} from './keys.js'
 // Routes
 import initRoutes from './routes/web.js'
 
@@ -14,10 +15,8 @@ app.use(express.json())
 app.use(cors())
 
 // DB Configuration
-const DB_NAME = 'instagram-clone'
-const PASSWORD = 'root'
-const CONNECTION_URL = `mongodb+srv://admin:${PASSWORD}@cluster0.u41my.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
-mongoose.connect(CONNECTION_URL, {
+
+mongoose.connect(DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
