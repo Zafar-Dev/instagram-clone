@@ -3,11 +3,16 @@ import post from '../models/dbModel.js'
 import authController from '../app/controllers/authController.js'
 import homeController from '../app/controllers/homeController.js'
 import redirectLogin from '../app/middlewares/redirectLogin.js'
+import postController from '../app/controllers/postController.js'
 const initRoutes = (app) => {
 
     // -- Authenticate --
     app.post('/signup', authController.signUp)
     app.post('/signin', authController.signIn)
+
+    // -- Post CRUD --
+    app.post('/createpost', redirectLogin, postController.createPost)
+
 
     app.get('/',redirectLogin, homeController.index)
 
