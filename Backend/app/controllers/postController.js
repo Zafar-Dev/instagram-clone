@@ -15,6 +15,24 @@ const postController = () => {
             .then(result => res.status(201).json({result}))
             .catch(err => console.log(err))
             
+        },
+        getAllPosts(req, res){
+            Post.find()
+            .populate("postedBy", "_id, userName")
+            .then(posts => res.status(200).json({posts}))
+            .catch(err => console.log(err))
+        },
+        getFollowersPosts(req, res){
+            Post.find()
+            .populate("postedBy", "_id, userName")
+            .then(posts => res.status(200).json({posts}))
+            .catch(err => console.log(err))
+        },
+        getMyPosts(req, res){
+            Post.find({postedBy: req.user._id})
+            .populate("postedBy", "_id, userName")
+            .then(posts => res.status(200).json({posts}))
+            .catch(err => console.log(err))
         }
     }
 }

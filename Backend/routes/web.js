@@ -12,7 +12,9 @@ const initRoutes = (app) => {
 
     // -- Post CRUD --
     app.post('/createpost', redirectLogin, postController.createPost)
-
+    app.get('/allposts', postController.getAllPosts)
+    app.get('/posts', postController.getFollowersPosts)
+    app.get('/myposts', redirectLogin, postController.getMyPosts)
 
     app.get('/',redirectLogin, homeController.index)
 
