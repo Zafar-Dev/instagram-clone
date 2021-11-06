@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
 import '../../models/user.js'
-import jwtToken from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import {JWT_SECRET} from '../../keys.js'
 const User = mongoose.model('User')
 
@@ -54,7 +54,7 @@ const authController = () => {
                 bcrypt.compare(password, user.password)
                 .then(isCorrect => {
                     if(isCorrect) {
-                        const token = jwtToken.sign({_id: user._id}, JWT_SECRET)
+                        const token = jwt.sign({_id: user._id}, JWT_SECRET)
                         return res.status(200).json({token})
                     }
                     return res.status(401).json({message: "Invalid Password"})

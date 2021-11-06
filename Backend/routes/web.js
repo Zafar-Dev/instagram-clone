@@ -2,14 +2,14 @@
 import post from '../models/dbModel.js'
 import authController from '../app/controllers/authController.js'
 import homeController from '../app/controllers/homeController.js'
-
+import redirectLogin from '../app/middlewares/redirectLogin.js'
 const initRoutes = (app) => {
 
     // -- Authenticate --
     app.post('/signup', authController.signUp)
     app.post('/signin', authController.signIn)
 
-    app.get('/', homeController.index)
+    app.get('/',redirectLogin, homeController.index)
 
     // app.get("/", (req, res) => res.status(200).send('Hello World'))
     // app.post("/upload", (req, res) => {
