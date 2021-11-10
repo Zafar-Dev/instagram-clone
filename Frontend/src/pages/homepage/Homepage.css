@@ -1,0 +1,27 @@
+
+.layout {
+    position: relative;
+    z-index: 10;
+    top: 60px;
+}
+.section_container {
+    display: flex;
+    width: 100;
+    margin-top: 12px;
+    position: relative;
+}
+
+.left_container {
+    background-color: blueviolet;
+    width: 620px;
+    height: 200vh;
+}
+
+.right_container {
+    position: fixed;
+    top: 60px;
+    right: 200px;
+    background-color: rgb(117, 61, 92);
+    width: 330px;
+    height: 100vh;
+}    

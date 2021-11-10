@@ -1,0 +1,35 @@
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.nav {
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.navbar_container ul {
+    display: flex;
+    list-style: none;
+}
+.navbar_container ul li a{
+    padding: 4px 8px;
+    margin: 0 4px;
+}
+
+.navbar_container img{
+    display: block;
+}
+
+.profile_link img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    margin: 0 8px;    
+    object-fit: cover;
+    cursor: pointer;
+}

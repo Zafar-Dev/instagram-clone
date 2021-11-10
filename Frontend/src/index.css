@@ -1,3 +1,7 @@
+:root{
+  --primary-color: "#000000"
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +11,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+
+}
+.container {
+  width: 100%; 
+}
+
+.container__width {
+  max-width: 975px;
+  margin: auto;
+  padding: 0 1%;
 }
