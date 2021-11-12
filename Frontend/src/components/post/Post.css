@@ -1,0 +1,150 @@
+
+.post_container {
+    width: 100%;
+    /* height: 600px; */
+    /* background-color: chocolate; */
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+}
+
+.post_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    height: 60px;
+    background-color: #fff;
+}
+
+.post_header > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post_person_img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.post_person_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post_person_name {
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.post_header_option{
+    cursor: pointer;
+}
+
+.post_body {
+    width: 100%;    
+}
+.post_img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+.post_footer {    
+    padding: 10px 18px;
+}
+
+.post_footer_option {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_footer_left_option span{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.post_footer_left_option span svg, .post_save svg {
+    fill: rgba(0, 0, 0, 0.685);
+}
+
+.post_save {
+    cursor: pointer;
+}
+
+
+.post_likes {
+    font-weight: 600;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+.post_caption_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 4px;
+}
+.post_caption_container p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+.post_caption {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.post_all_comments {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.6;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.post_time {
+    font-size: 10px;
+    margin-top: 8px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+
+.post_add_comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.post_add_comment > div:nth-child(1){
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+}
+
+.post_add_text {
+    margin-left: 8px;
+}
+
+.post_add_text input {
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 6px;
+}
+.post_add_text input:focus{
+    outline: none;
+}
+.post_comment_button {
+    padding: 4px 12px;
+    border: 0;
+    cursor: pointer;
+    color: #0095f6;
+}

@@ -1,0 +1,48 @@
+
+.switch_account_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.profile_info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile_img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.profile_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(226, 184, 128);
+}
+
+.profile_username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile_fullname {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(167, 167, 167);
+}
+
+.switch_button {
+    /* padding: 4px 8px; */
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    color: #0095f6;
+    cursor: pointer;
+}

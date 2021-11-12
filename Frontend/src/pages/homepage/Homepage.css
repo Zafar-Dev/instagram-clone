@@ -3,6 +3,7 @@
     position: relative;
     z-index: 10;
     top: 60px;
+    /* background-color: #fafafa; */
 }
 .section_container {
     display: flex;
@@ -12,16 +13,25 @@
 }
 
 .left_container {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 620px;
     height: 200vh;
+    margin: auto;
 }
 
 .right_container {
-    position: fixed;
-    top: 60px;
-    right: 200px;
-    background-color: rgb(117, 61, 92);
+    position: relative;
+    background-color: #fafafa;
     width: 330px;
     height: 100vh;
 }    
+.fixed_section {
+    position: fixed;
+    width: 330px;
+}
+
+@media screen and (max-width: 976px){
+    .right_container{
+        display: none;
+    }
+}
