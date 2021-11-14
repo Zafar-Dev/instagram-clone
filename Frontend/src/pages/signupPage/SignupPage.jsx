@@ -1,25 +1,28 @@
-import './LoginForm.css'
+import './SignupPage.css'
 import logo from '../../assests/images/logo.png'
 import android from '../../assests/images/appstore.png'
 import apple from '../../assests/images/apple_appstore.png'
-const LoginForm = () => {
+const LoginPage = () => {
+
     return (
-        <div className="login_form_container">
-            <div className="login_box">
+        <div className="signup_form_container">
+            <div className="signup_box">
                 <img className="insta_logo" src={logo} alt="logoHere" />
-                <div className="login_info">
+                <div className="sign_text">Sign up to see photos and videos from your friends.</div>
+                <div className="signup_facebook">Log in with Facebook</div>
+                <div className="sperator">
+                        <div>OR</div>
+                </div>
+                <div className="signup_info">
+                    <div className="input_fullname"><input type="text" placeholder="Fullname" /></div>
+                    <div className="input_username"><input type="text" placeholder="Username" /></div>
                     <div className="input_email"><input type="text" placeholder="Email" /></div>
                     <div className="input_pass"><input type="password" placeholder="Passsword" /></div>
-                    <button className="login_button">Log In</button>
-                    <div className="sperator">
-                        <div>OR</div>
-                    </div>
-                    <div className="login_facebook">Log in with Facebook</div>
-                    <div className="forget_pass">Forget password?</div>
+                    <button className="signup_button">Sign up</button>
                 </div>
             </div>
             <div className="signup_link">
-                <span>Don't have an account? </span><span>Sign up</span>
+                <span>Have an account? </span><span>Log in</span>
             </div>
             <div className="app_link">
                 <div>Get the app.</div>
@@ -29,7 +32,8 @@ const LoginForm = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 
-export default LoginForm
+export default LoginPage

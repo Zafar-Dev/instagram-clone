@@ -1,0 +1,132 @@
+
+.signup_form_container {
+    margin: 30px 0;     
+}
+
+.signup_box {
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;    
+    font-size: 13px;
+    margin: auto;
+}
+
+.insta_logo{
+    height: 50px;
+    margin: 12px 0;
+}
+.signup_info {
+    margin-top: 20px;
+}
+.signup_info input{
+    padding: 8px 12px;
+    margin: 4px 0;    
+    background: #fafafa;
+    border: 1px solid #dbdbdb;    
+    border-radius: 3px;
+    width: 270px;
+    color: #8e8e8e;
+}
+
+.signup_info input:focus{
+    outline: 0 none;
+    border-color: #b8b8b8;
+}
+.signup_button {
+    border: 0;
+    outline: 0;
+    width: 270px;
+    color: #fff;
+    background-color: #0095f6;
+    padding: 7px 0;
+    text-align: center;
+    margin-top: 12px;
+    border-radius: 3px;
+}
+
+.sperator {
+    margin: 20px auto;
+    font-weight: 600;
+    opacity: 0.7;
+    text-align: center;
+    width: 270px;
+    position: relative;
+}
+
+.sperator div::before, .sperator div::after {
+    content: '';
+    width: 110px;
+    height: 2px;
+    background-color: #dbdbdb;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sperator div::before {
+    left: 0;
+}
+
+.sperator div::after {
+    right: 0;
+}
+
+.sign_text {
+    width: 270px;
+    margin: auto;
+    font-weight: 600;
+    color: #8e8e8e;
+    font-size: 16px;
+}
+
+.signup_facebook {
+    background-color: #0095f6;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding: 7px 0;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 270px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.forget_pass {
+    color: #385185;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.signup_link {
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;    
+    font-size: 14px;
+    margin: 20px auto;
+}
+
+.signup_link span:nth-child(2) {
+    cursor: pointer;
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.app_link {
+    width: 350px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    margin: auto;
+}
+.app__links img{
+    width: 140px;
+    margin: 4px;
+    margin-top: 15px;
+    object-fit: cover;
+    cursor: pointer;
+}
