@@ -8,7 +8,7 @@ const postSchema = mongoose.Schema({
     },
     image:{
         type: String,
-        default: "No Pic"
+        require: true
     },
     comments:{
         type: []

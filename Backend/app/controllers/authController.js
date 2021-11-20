@@ -9,11 +9,12 @@ const authController = () => {
     return {
         async signUp(req, res){
             const {fullName, userName, email, password} = req.body
-            // Hash Password
-            const hashPassword = await bcrypt.hash(password,12)            
+                       
             // Check for Empty Fields
-            if (!fullName || !userName || !email || !password) res.status(422).json({error: 'Field cannot be Empty!'})
+            if (!fullName || !userName || !email || !password) res.status(422).json({message: 'Field cannot be Empty!'})
             else {
+                // Hash Password
+                const hashPassword = await bcrypt.hash(password,12) 
                 // Check Username
                 User.findOne({userName})
                 .then(exitUserName => {
@@ -45,8 +46,9 @@ const authController = () => {
             }
         },
         async signIn(req, res){
+            console.log(req.body)
             const {email, password} = req.body
-            if (!email || !password) return res.status(422).json({error: 'Field cannot be Empty!'})
+            if (!email || !password) return res.status(422).json({message: 'Field cannot be Empty!'})
             //Check for email
             User.findOne({email})
             .then(user => {
@@ -55,7 +57,8 @@ const authController = () => {
                 .then(isCorrect => {
                     if(isCorrect) {
                         const token = jwt.sign({_id: user._id}, JWT_SECRET)
-                        return res.status(200).json({token})
+                        const {_id, fullname, email} = user
+                        return res.status(200).json({token, user:{_id, fullname, email}})
                     }
                     return res.status(401).json({message: "Invalid Password"})
                 })

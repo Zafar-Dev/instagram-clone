@@ -86,7 +86,7 @@
 
 .post_caption_container {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 4px;
 }
@@ -125,7 +125,7 @@
 
 .post_add_comment > div:nth-child(1){
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     /* align-items: center; */
 }
 

@@ -5,9 +5,11 @@ const Post = mongoose.model("Post")
 const postController = () => {
     return {
         createPost(req, res){
-            const {caption} = req.body
-            if (!caption) return res.status(422).json({message: "Fields can't be Empty"})
+            const {image, caption} = req.body
+            console.log(req.body)
+            if (!image) return res.status(422).json({message: "Select an Image!"})
             const post = new Post({
+                image,
                 caption,
                 postedBy: req.user
             })

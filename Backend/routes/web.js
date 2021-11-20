@@ -11,7 +11,7 @@ const initRoutes = (app) => {
     app.post('/signin', authController.signIn)
 
     // -- Post CRUD --
-    app.post('/createpost', redirectLogin, postController.createPost)
+    app.post('/createpost', postController.createPost)
     app.get('/allposts', postController.getAllPosts)
     app.get('/posts', postController.getFollowersPosts)
     app.get('/myposts', redirectLogin, postController.getMyPosts)
